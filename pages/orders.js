@@ -623,9 +623,9 @@ function Orders(props) {
   };
 
   function name({ row }) {
-    const name =
-      `${row.original.user?.username || ""} ${row.original.user?.lastname || ""
-        }`.trim() || "N/A";
+    const name = row.original.isGuestOrder
+      ? row.original.guestName || "N/A"
+      : `${row.original.user?.username || ""} ${row.original.user?.lastname || ""}`.trim() || "N/A";
 
     return (
       <div>
@@ -670,11 +670,15 @@ function Orders(props) {
     );
   }
 
-  function mobile({ value }) {
+  function mobile({ row }) {
+    const phoneNumber = row.original.isGuestOrder
+      ? row.original.guestPhone || "N/A"
+      : row.original.user?.number || "N/A";
+    
     return (
       <div>
         <p className="text-black text-[15px] font-normal text-center">
-          {value}
+          {phoneNumber}
         </p>
       </div>
     );
@@ -708,7 +712,9 @@ function Orders(props) {
     return (
       <div>
         <p className="text-black text-[15px] font-normal text-center">
-          {row?.original?.isOrderPickup
+          {row?.original?.isGuestOrder
+            ? "Guest Order"
+            : row?.original?.isOrderPickup
             ? "In Store Pickup"
             : row?.original?.isLocalDelivery
               ? " Local Delivery"
@@ -898,7 +904,6 @@ function Orders(props) {
       },
       {
         Header: "Mobile",
-        accessor: "user.number",
         Cell: mobile,
       },
 
@@ -1257,7 +1262,9 @@ function Orders(props) {
                   <div className="flex justify-between items-center py-2">
                     <p className="text-gray-600">Delivery Type:</p>
                     <p className="text-gray-800 font-medium">
-                      {cartData?.isOrderPickup
+                      {cartData?.isGuestOrder
+                        ? "Guest Order"
+                        : cartData?.isOrderPickup
                         ? "In Store Pickup"
                         : cartData?.isLocalDelivery
                           ? "Next Day Delivery"
