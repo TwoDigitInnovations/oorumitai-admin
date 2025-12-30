@@ -520,7 +520,7 @@ function AddProduct(props) {
                 </div>
                 <div className="pt-0">
                   <p className="text-black text-base font-normal pb-1">
-                    Vietnamies Name
+                    French Name
                   </p>
                   <div className="relative">
                     <input
@@ -839,12 +839,12 @@ function AddProduct(props) {
                     </label>
                   </div>
                 </div>
-                <div className="mb-4">
+                {/* <div className="mb-4">
                   <p className="text-black text-base font-medium pb-2">
                     Is Product is Available for Next Day Delivery
                   </p>
 
-                  {/* Enable Checkbox */}
+               
                   <div className="flex items-center space-x-3 mb-2">
                     <input
                       type="checkbox"
@@ -868,7 +868,7 @@ function AddProduct(props) {
                     </label>
                   </div>
 
-                  {/* Disable Checkbox */}
+                 
                   <div className="flex items-center space-x-3">
                     <input
                       type="checkbox"
@@ -891,7 +891,7 @@ function AddProduct(props) {
                       No, Next Day Delivery is Not available
                     </label>
                   </div>
-                </div>
+                </div> */}
                 <div className="mb-4">
                   <p className="text-black text-base font-medium pb-2">
                     Is Product is Available for In Store Pickup
@@ -941,12 +941,12 @@ function AddProduct(props) {
                     </label>
                   </div>
                 </div>
-                <div className="mb-4">
+                {/* <div className="mb-4">
                   <p className="text-black text-base font-medium pb-2">
                     Is Product is Available for CurbSide Pickup
                   </p>
 
-                  {/* Enable Checkbox */}
+              
                   <div className="flex items-center space-x-3 mb-2">
                     <input
                       type="checkbox"
@@ -970,7 +970,7 @@ function AddProduct(props) {
                     </label>
                   </div>
 
-                  {/* Disable Checkbox */}
+              
                   <div className="flex items-center space-x-3">
                     <input
                       type="checkbox"
@@ -993,7 +993,7 @@ function AddProduct(props) {
                       No, CurbSide Pickup is Not available
                     </label>
                   </div>
-                </div>
+                </div> */}
               </div>
 
 

@@ -180,7 +180,7 @@ export default function Login(props) {
           </div>
 
           <div className="mt-8 text-center">
-            <p className="text-xs text-gray-500">© 2025 Bach Hoa Houston. All rights reserved.</p>
+            <p className="text-xs text-gray-500">© 2025 Oorumittai. All rights reserved.</p>
           </div>
         </div>
 

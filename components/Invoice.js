@@ -32,7 +32,7 @@ const Invoice = ({ order }) => {
   console.log(orderDateTime);
 
 
-  const website = "www.bachhoahouston.com";
+  const website = "www.Oorumittai.com";
   const customerName = `${order?.Local_address?.name || ""} ${order?.Local_address?.lastname || ""}`.trim() ||
     `${order?.user?.username || ""} ${order?.user?.lastname || ""}`.trim() ||
     "N/A";
@@ -274,7 +274,7 @@ const Invoice = ({ order }) => {
             <h1
               style={{ fontSize: "2rem", fontWeight: "bold", color: "#F9C60A" }}
             >
-              BACH HOA HOUSTON
+              Oorumittai
             </h1>
             <p style={{ fontSize: "0.875rem" }}>{website}</p>
           </div>
@@ -602,8 +602,8 @@ const Invoice = ({ order }) => {
         </div>
 
         <div style={{ marginTop: "2rem", textAlign: "center" }}>
-          <p>Thank you for shopping with BACH HOA HOUSTON</p>
-          <p>For queries, contact us at contact@bachhoahouston.com</p>
+          <p>Thank you for shopping with Oorumittai</p>
+          <p>For queries, contact us at contact@Oorumittai.com</p>
         </div>
       </div>
     </div >

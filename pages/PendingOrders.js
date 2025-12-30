@@ -600,7 +600,7 @@ function Orders(props) {
               </div>
             </div>
 
-            <div className="fixed bottom-0  right-0 bg-white px-2 py-2 border-t border-gray-200 md:w-[44vw] w-[380px] flex md:gap-5 gap-2">
+            <div className="fixed bottom-0 right-0 bg-white px-5 py-4 border-t border-gray-200 md:w-[43vw] w-[380px] flex md:gap-5 gap-2 shadow-lg">
               <p className="bg-[#F9C60A] w-full py-4 px-1 rounded-lg text-white text-lg font-bold flex justify-center items-center">
                 Total Amout: ${cartData?.total}
               </p>

@@ -1,7 +1,7 @@
 import axios from "axios";
 // const ConstantsUrl = "";
-//  const ConstantsUrl = "http://localhost:8000/v1/api/";
- export const ConstantsUrl = "https://api.oorumittai.com/v1/api/";
+  // const ConstantsUrl = "http://localhost:8000/v1/api/";
+  export const ConstantsUrl = "https://api.oorumittai.com/v1/api/";
 
 function Api(method, url, data, router) {
   return new Promise(function (resolve, reject) {

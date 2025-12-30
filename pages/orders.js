@@ -1035,8 +1035,6 @@ function Orders(props) {
                 >
                   <option value="All">All</option>
                   <option value="InStorePickup">In Store Pickup</option>
-                  <option value="CurbsidePickup">Curbside Pickup</option>
-                  <option value="NextdayDelivery">Local Delivery</option>
                   <option value="Shipment">Shipment</option>
                   <option value="Cancel">Cancelled order</option>
                 </select>
