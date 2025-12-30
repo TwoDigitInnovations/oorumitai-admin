@@ -526,7 +526,7 @@ function AddProduct(props) {
                     <input
                       className="bg-transparent w-full md:h-[46px] h-[40px] pl-12 pr-5 border border-newblack rounded-[10px] outline-none text-black text-base font-light"
                       type="text"
-                      placeholder="Vietnamies Name"
+                      placeholder="French Name"
                       value={addProductsData.vietnamiesName}
                       required
                       onChange={(e) => {
