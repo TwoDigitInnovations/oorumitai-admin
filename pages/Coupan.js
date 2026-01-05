@@ -416,18 +416,19 @@ function Coupons(props) {
                   </div>
                 </div>
                 <div className="flex items-center space-x-5">
-                  {item.ussageType === "once" && (
-                    <button
-                      onClick={() => {
-                        setAllUsedCoupanUser(item.userId)
-                        setOpen(true)
-                      }}
-                      aria-label="Edit coupon"
-                      className="text-[#F9C60A]  cursor-pointer hover:text-[#d46b19] transition"
-                    >
-                      <IoEyeSharp size={26} />
-                    </button>
-                  )}
+                  <button
+                    onClick={() => {
+                      console.log("Coupon item:", item);
+                      console.log("userId array:", item.userId);
+                      console.log("userId length:", item.userId?.length);
+                      setAllUsedCoupanUser(item.userId || [])
+                      setOpen(true)
+                    }}
+                    aria-label="View coupon users"
+                    className="text-[#F9C60A] cursor-pointer hover:text-[#d46b19] transition"
+                  >
+                    <IoEyeSharp size={26} />
+                  </button>
 
                   <button
                     onClick={() => {
@@ -477,13 +478,21 @@ function Coupons(props) {
                       </tr>
                     </thead>
                     <tbody>
-                      {allUsedCoupanUser.map((user, index) => (
-                        <tr key={index} className="border-t text-gray-700">
-                          <td className="py-2 px-3 sm:px-4 border-b">{user.username}</td>
-                          <td className="py-2 px-3 sm:px-4 border-b">{user.email}</td>
-                          <td className="py-2 px-3 sm:px-4 border-b">{user.number}</td>
+                      {allUsedCoupanUser && allUsedCoupanUser.length > 0 ? (
+                        allUsedCoupanUser.map((user, index) => (
+                          <tr key={index} className="border-t text-gray-700">
+                            <td className="py-2 px-3 sm:px-4 border-b">{user.username}</td>
+                            <td className="py-2 px-3 sm:px-4 border-b">{user.email}</td>
+                            <td className="py-2 px-3 sm:px-4 border-b">{user.number}</td>
+                          </tr>
+                        ))
+                      ) : (
+                        <tr>
+                          <td colSpan="3" className="py-4 px-4 text-center text-gray-500">
+                            No users have used this coupon yet
+                          </td>
                         </tr>
-                      ))}
+                      )}
                     </tbody>
                   </table>
                 </div>

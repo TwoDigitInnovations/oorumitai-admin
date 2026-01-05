@@ -154,7 +154,7 @@ const SidePannel = ({ setOpenTab, openTab }) => {
               <img
                 src="/logonew.png"
                 alt=""
-                className="w-[202px] h-[52px] object-contain scale-[3]"
+                className="w-[140px] h-[42px] object-contain scale-[3]"
               />
             </div>
 
@@ -200,7 +200,7 @@ const SidePannel = ({ setOpenTab, openTab }) => {
               <img
                 src="/logonew.png"
                 alt=""
-                className="w-[212px] h-[48px] object-contain scale-[3]"
+                className="w-[200px] h-[48px] object-contain scale-[3]"
               />
             </div>
             <div className="flex ms-2 justify-between">
