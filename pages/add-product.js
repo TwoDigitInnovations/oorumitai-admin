@@ -146,10 +146,8 @@ function AddProduct(props) {
       },
     ],
     isShipmentAvailable: "",
-    isNextDayDeliveryAvailable: "",
     isInStoreAvailable: "",
     isReturnAvailable: "",
-    isCurbSidePickupAvailable: "",
   });
 
   const [categoryData, setCategoryData] = useState([]);
@@ -225,9 +223,7 @@ function AddProduct(props) {
             unit: res?.data?.price_slot[0]?.unit,
             isShipmentAvailable: res?.data?.isShipmentAvailable,
             isReturnAvailable: res?.data?.isReturnAvailable,
-            isNextDayDeliveryAvailable: res?.data?.isNextDayDeliveryAvailable,
             isInStoreAvailable: res?.data?.isInStoreAvailable,
-            isCurbSidePickupAvailable: res?.data?.isCurbSidePickupAvailable,
           });
           setRelatedNames(res?.data?.relatedName?.join(", "));
           setvarients(res?.data?.varients);
