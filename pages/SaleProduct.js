@@ -300,7 +300,7 @@ function SaleProduct(props) {
                         )}
                         {/* Sale Price Badge */}
                         <div className="absolute -bottom-2 -right-2 bg-[#F9C60A] text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-                          ${sale.price}
+                          INR {sale.price}
                         </div>
                       </div>
                     </div>
@@ -318,12 +318,12 @@ function SaleProduct(props) {
                     {/* Original Price vs Sale Price */}
                     <div className="flex items-center gap-2 mb-4">
                       <span className="text-lg font-bold text-[#F9C60A]">
-                        ${sale.price}
+                        INR {sale.price}
                       </span>
                       {sale?.price_slot &&
                         sale.price_slot?.our_price && (
                           <span className="text-sm text-gray-500 line-through">
-                            ${sale.price_slot.our_price}
+                            INR {sale.price_slot.our_price}
                           </span>
                         )}
                       {sale?.price_slot &&

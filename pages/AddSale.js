@@ -267,7 +267,7 @@ function AddSale(props) {
                   <option value="">Select a price slot</option>
                   {item.productDetails.price_slot?.map((slot, i) => (
                     <option key={i} value={JSON.stringify(slot)}>
-                      {slot.unit} - ₹{slot.our_price}
+                      {slot.unit} - ${slot.our_price}
                     </option>
                   ))}
                 </select>
@@ -326,7 +326,7 @@ function AddSale(props) {
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                  <span className="text-gray-500">₹</span>
+                  <span className="text-gray-500">$</span>
                 </div>
                 <input
                   type="number"
